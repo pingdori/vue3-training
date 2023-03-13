@@ -2,6 +2,10 @@
     這是單一產品頁面
     <h2>{{ product.title }}</h2>
     <img :src="product.imageUrl" class="img-fluid" alt="">
+    <h4>產品說明</h4>
+    <p>{{ product.description }}</p>
+    <h4>產品規格</h4>
+    <p>{{product.content}}</p>
 </template>
 <script lang="ts">
 // import { RouterLink } from 'vue-router'

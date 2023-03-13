@@ -61,6 +61,7 @@ const app = createApp({
       axios[method](url, { data: this.tempProduct }).then((res) => {
         this.getProducts();
         productModal.hide();
+        console.log(res);
       });
     },
     //建立新增產品時要跳出modal視窗
