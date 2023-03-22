@@ -24,6 +24,6 @@ git commit -m 'commit'
 # git push -f git@github.com:pingdori/pingdori.github.io.git main
 
 # if you are deploying to https://pingdori.github.io/Vue3Training/week-6
- git push -f https://github.com/pingdori/vue-week-7.git main:origin
+ git push -f https://github.com/pingdori/vue-pokedex-project.git main:origin
 
 cd -

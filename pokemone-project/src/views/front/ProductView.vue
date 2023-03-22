@@ -37,11 +37,13 @@
       <div class="col-md-5">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-white px-0 mb-0 py-3">
+            <!-- <li class="breadcrumb-item">
+              <a class="text-muted" href="/">首頁</a>
+            </li> -->
             <li class="breadcrumb-item">
-              <a class="text-muted" href="../FrontLayout.vue">首頁</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a class="text-muted" href="./ProductsView.vue">周邊</a>
+              <a class="text-muted" href="/vue-pokedex-project/products"
+                >周邊</a
+              >
             </li>
             <li class="breadcrumb-item active" aria-current="page">
               {{ product.category }}
@@ -61,7 +63,7 @@
     </div>
     <div class="row my-5">
       <div class="col-md-6">
-        <p>
+        <p class="fs-5">
           {{ product.description }}
         </p>
       </div>
@@ -69,14 +71,14 @@
     <h3 class="fw-bold">產品細節</h3>
     <div class="swiper-container mt-4 mb-5">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="d-flex flex-column bd-highlight mb-3">
           <img
             :src="product.imageUrl"
             class="card-img-top rounded-0"
             alt="..."
           />
           <div
-            class="card border-0 mb-4 position-relative position-relative"
+            class="card-img-top rounded-0"
             v-for="(url, key) in product.imagesUrl"
             :key="url.id"
           >
@@ -91,11 +93,10 @@
       <div
         class="d-flex flex-column flex-md-row justify-content-between align-items-md-center align-items-start"
       >
-        <p class="mb-0 fw-bold">{{ product.content }}</p>
+        <p class="mb-0 fs-5">{{ product.content }}</p>
       </div>
     </div>
   </div>
- 
 </template>
 <style>
 .underNav {
@@ -112,7 +113,7 @@ export default {
       product: [],
     };
   },
-  components: { addToCart},
+  components: { addToCart },
   methods: {
     getProduct() {
       const { id } = this.$route.params;
