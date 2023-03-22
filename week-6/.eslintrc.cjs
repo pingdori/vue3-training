@@ -18,6 +18,12 @@ module.exports = {
       }
     }
   },
+  'prettier/prettier': [
+    'error',
+    {
+      endOfLine: 'auto'
+    }
+  ],
   plugins: ['vue'],
   rules: {}
 }

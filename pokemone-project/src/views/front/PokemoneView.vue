@@ -1,0 +1,1 @@
+<template>寶可夢圖鑑</template>
